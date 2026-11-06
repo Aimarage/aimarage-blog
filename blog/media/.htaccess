@@ -1,0 +1,7 @@
+Options -Indexes -ExecCGI
+<FilesMatch "\.(?i:php\d?|phtml|phar|pl|py|cgi|sh|shtml|html?|svg|js)$">
+	Require all denied
+</FilesMatch>
+<IfModule mod_headers.c>
+	Header set X-Content-Type-Options "nosniff"
+</IfModule>

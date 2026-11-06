@@ -1,0 +1,11 @@
+/blog/config.php
+/blog/content/*
+!/blog/content/.htaccess
+!/blog/content/.gitkeep
+/blog/media/*
+!/blog/media/.htaccess
+!/blog/media/.gitkeep
+/blog/cache/*
+!/blog/cache/.htaccess
+!/blog/cache/.gitkeep
+.DS_Store

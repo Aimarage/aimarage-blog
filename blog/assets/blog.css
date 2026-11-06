@@ -1,0 +1,226 @@
+/* Farben und Maße */
+:root {
+	--blog-bg: #ffffff;
+	--blog-text: #1d1f23;
+	--blog-muted: #5f6672;
+	--blog-line: #e3e5e9;
+	--blog-accent: #2357c6;
+	--blog-code-bg: #f4f5f7;
+	--blog-width: 720px;
+	--blog-font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--blog-bg: #15171b;
+		--blog-text: #e7e9ec;
+		--blog-muted: #a0a6b0;
+		--blog-line: #2c3038;
+		--blog-accent: #7aa2ff;
+		--blog-code-bg: #1f2228;
+	}
+}
+
+/* Eigenes Layout */
+body.aimarage-blog-page {
+	margin: 0;
+	background: var(--blog-bg);
+	color: var(--blog-text);
+	font: 17px/1.65 var(--blog-font);
+}
+
+.aimarage-blog-page .site-head,
+.aimarage-blog-page .site-foot,
+.aimarage-blog-page main {
+	max-width: var(--blog-width);
+	margin: 0 auto;
+	padding: 0 16px;
+}
+
+.aimarage-blog-page .site-head {
+	display: flex;
+	gap: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid var(--blog-line);
+	font-weight: 600;
+}
+
+.aimarage-blog-page .site-foot {
+	margin-top: 48px;
+	padding-top: 20px;
+	padding-bottom: 40px;
+	border-top: 1px solid var(--blog-line);
+	font-size: 14px;
+}
+
+/* Blog */
+.aimarage-blog {
+	max-width: var(--blog-width);
+	margin: 0 auto;
+	padding: 32px 0;
+	color: var(--blog-text);
+	overflow-wrap: break-word;
+}
+
+.aimarage-blog a {
+	color: var(--blog-accent);
+}
+
+.aimarage-blog h1 {
+	font-size: 2.1em;
+	line-height: 1.2;
+	margin: 0 0 12px;
+}
+
+.aimarage-blog .blog-lead {
+	font-size: 1.15em;
+	color: var(--blog-muted);
+	margin: 0 0 12px;
+}
+
+.aimarage-blog .blog-meta,
+.aimarage-blog .blog-back,
+.aimarage-blog time {
+	color: var(--blog-muted);
+	font-size: 0.9em;
+}
+
+.aimarage-blog .blog-back {
+	margin: 0 0 8px;
+}
+
+.aimarage-blog .blog-cover {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	margin: 20px 0 0;
+}
+
+/* Übersicht */
+.aimarage-blog .blog-items {
+	list-style: none;
+	margin: 24px 0 0;
+	padding: 0;
+}
+
+.aimarage-blog .blog-item {
+	border-top: 1px solid var(--blog-line);
+}
+
+.aimarage-blog .blog-item a {
+	display: block;
+	padding: 20px 0;
+	color: inherit;
+	text-decoration: none;
+}
+
+.aimarage-blog .blog-item img {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 1200 / 630;
+	object-fit: cover;
+	border-radius: 8px;
+	margin-bottom: 12px;
+}
+
+.aimarage-blog .blog-item h2 {
+	font-size: 1.35em;
+	line-height: 1.3;
+	margin: 0 0 6px;
+	color: var(--blog-accent);
+}
+
+.aimarage-blog .blog-item p {
+	margin: 0 0 6px;
+}
+
+.aimarage-blog .blog-pager {
+	display: flex;
+	justify-content: space-between;
+	gap: 12px;
+	margin-top: 24px;
+	padding-top: 20px;
+	border-top: 1px solid var(--blog-line);
+}
+
+/* Artikeltext */
+.aimarage-blog .blog-body {
+	margin-top: 28px;
+}
+
+.aimarage-blog .blog-body h2 {
+	font-size: 1.5em;
+	line-height: 1.3;
+	margin: 1.8em 0 0.5em;
+}
+
+.aimarage-blog .blog-body h3,
+.aimarage-blog .blog-body h4 {
+	font-size: 1.2em;
+	margin: 1.5em 0 0.4em;
+}
+
+.aimarage-blog .blog-body img {
+	max-width: 100%;
+	height: auto;
+}
+
+.aimarage-blog .blog-body figure {
+	margin: 1.5em 0;
+}
+
+.aimarage-blog .blog-body figcaption {
+	color: var(--blog-muted);
+	font-size: 0.9em;
+}
+
+.aimarage-blog .blog-body blockquote {
+	margin: 1.5em 0;
+	padding: 0 0 0 16px;
+	border-left: 3px solid var(--blog-line);
+	color: var(--blog-muted);
+}
+
+.aimarage-blog .blog-body code {
+	background: var(--blog-code-bg);
+	padding: 1px 5px;
+	border-radius: 4px;
+	font-size: 0.9em;
+}
+
+.aimarage-blog .blog-body pre {
+	background: var(--blog-code-bg);
+	padding: 14px 16px;
+	border-radius: 6px;
+	overflow-x: auto;
+}
+
+.aimarage-blog .blog-body pre code {
+	background: none;
+	padding: 0;
+}
+
+.aimarage-blog .blog-body .table {
+	overflow-x: auto;
+}
+
+.aimarage-blog .blog-body table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.aimarage-blog .blog-body th,
+.aimarage-blog .blog-body td {
+	border-bottom: 1px solid var(--blog-line);
+	padding: 8px 10px;
+	text-align: left;
+}
+
+.aimarage-blog .blog-body hr {
+	border: 0;
+	border-top: 1px solid var(--blog-line);
+	margin: 2em 0;
+}
